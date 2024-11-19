@@ -1,8 +1,8 @@
 import express from "express";
 import { connectMongoose } from "../config/mongoose.mjs";
 import { connectMongoDB } from "../config/mongodb.mjs";
-import router from "../api/mongoose/routes.mjs";
-import { routerMongo } from "../api/mongodb/routes.mjs";
+import router from "./mongoose/routes.mjs";
+import { routerMongo } from "./mongodb/routes.mjs";
 
 const app = express();
 app.use(express.json());
