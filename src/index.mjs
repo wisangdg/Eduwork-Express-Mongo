@@ -9,6 +9,10 @@ app.use(express.json());
 app.use("/api/v1", routerMongo);
 app.use("/api/v2", router);
 
+app.get("/", (_, res) => {
+  res.send("Hello Guys!");
+});
+
 (async () => {
   // Connect to Mongoose
   await connectMongoose();
